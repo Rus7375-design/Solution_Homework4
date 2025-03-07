@@ -1,12 +1,12 @@
-// Demo
+// Demo: Тестовый класс для демонстрации работы паттернов
 public class Main {
     public static void main(String[] args) {
-        // Singleton Test
+        // Тест Singleton
         ConfigurationManager configManager = ConfigurationManager.getInstance();
         System.out.println("maxPlayers: " + configManager.getConfig("maxPlayers"));
         configManager.printAllConfigs();
 
-        // Adapter Test
+        // Тест Adapter
         LegacyChatService legacyChat = new LegacyChatService();
         ChatService chatAdapter = new ChatServiceAdapter(legacyChat);
         chatAdapter.sendMessage("Hello world!");
